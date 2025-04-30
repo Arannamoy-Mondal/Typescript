@@ -2,7 +2,7 @@
   <li>
     Check node js: 
     
-    ```bash
+    ```py
     node -v
     ```
     
