@@ -23,4 +23,12 @@
   ```
     
   </li>
+  <li>
+    Run typescript file:
+
+  ```
+    node index.ts
+  ```
+    
+  </li>
 </ol>
