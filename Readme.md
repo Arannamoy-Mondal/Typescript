@@ -57,6 +57,21 @@
   > 
   >> npx দিয়ে আমরা প্যাকেজ রান করি, এমনকি ইনস্টল না করেও।  
   </li>
+
+<li>
+  Run directly ts file
+
+`import ts-node-dev package`
+
+```sql
+npm i ts-node-dev --save-dev
+```
+
+```sql
+npx ts-node-dev --respawn --transpile-only file _name
+```
+</li>
+  
 <li>
   Typescripty data tpyes:
 
