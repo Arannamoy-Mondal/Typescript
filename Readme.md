@@ -61,4 +61,24 @@
   ```
     
   </li>
+<li>
+  Typescripty data tpyes:
+
+  `implicit data type`
+
+  ```ts
+  let first_name="Hello"
+  ```
+
+  `explicit data type`
+
+  ```ts
+  let first_name:string="Hello"
+  let roll:number=24
+  let isCheck:boolean=true
+  let x:undefined=undefined
+  let y:null=null
+  ```
+</li>
+  
 </ol>
