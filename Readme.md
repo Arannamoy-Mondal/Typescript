@@ -78,6 +78,11 @@
   let isCheck:boolean=true
   let x:undefined=undefined
   let y:null=null
+  let z:number;
+  let array: number[]=[1,2,3];
+  array.push(4);
+  let tuple:[number,number]=[1,2]
+  let tuple2:[number,string,boolean]=[1,'Hello',true];
   ```
 </li>
   
