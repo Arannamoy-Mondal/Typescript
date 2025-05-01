@@ -227,4 +227,66 @@ Type Alias: Works like class.
 }
 ``` 
 </li>  
+
+<li>
+Ternary, optional chaining & nullish coalescing operator
+
+```ts
+{
+    // ternary 
+    const age:number=18;
+    age>=18?console.log("Got Citizenship"):console.log("Not yet");
+
+    // nullish coalescing operator
+
+    const isAuthenticated=" ";
+
+    const result=isAuthenticated ?? 'Guest';
+    const result2=isAuthenticated ? isAuthenticated: 'Guest'
+    console.log(result,result2);
+
+    // optional chaining
+
+    type Student={
+        name:string;
+        email?:string; // here '?' is optional is chaining user can skip this 
+        contact_no?:string
+    }
+
+}
+```
+  
+</li>
+<li>
+Never,unknown and nullable type
+
+```ts
+{
+    // nullable
+    const searchName=(name:string | null)=>{
+        if(name)console.log("Ok");
+        else console.log("Not ok");
+    }
+    searchName(null);
+
+    // unknown 
+
+    const check=(value:unknown)=>{
+        if(typeof(value)==='string')console.log('String');
+        else console.log("Other");
+    }
+    check("Hello")
+
+
+    // never
+
+    const error_func=(message:string):never=>{
+        throw new Error(message)
+    }
+
+    error_func("It's a mistake.")
+}
+```  
+</li>
+
 </ol>
