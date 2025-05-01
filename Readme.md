@@ -187,5 +187,29 @@ const new_arr:number[]=arr.map((el:number):number=>el*el)
 }
 ```
 </li>
-  
+
+<li>
+Type Alias: Works like class.
+
+```ts
+// Type Alias : Works like class
+{
+    type Student={
+        name:string;
+        age:number;
+        contact_no?:string
+    }
+
+    const std1:Student={
+        name:"Hello",
+        age:23
+    }
+
+    const std2:Student={
+        name:"Hi",
+        age:24
+    }
+}
+``` 
+</li>  
 </ol>
