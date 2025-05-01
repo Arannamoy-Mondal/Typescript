@@ -40,10 +40,15 @@
     
   </li>
   <li>
-    Create typescript config json file:
+    Config typescript config json file:
+
+  ```json
+  "rootDir": "./M_1/src",
+  "outDir": "./M_1/dist",  
+  ```
 
   ```
-    npx tsc --init
+    npx tsc
   ```
 
   >> npx vs npm
