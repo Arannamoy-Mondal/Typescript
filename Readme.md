@@ -89,7 +89,7 @@
   let tuple:[number,number]=[1,2]
   let tuple2:[number,string,boolean]=[1,'Hello',true];
   let details: {
-  company_name: "RTX"; // literal type
+  company_name?: "RTX"; // literal type
   first_name:string;
   middle_name?:string; // optional chaining
   last_name:string;
@@ -97,6 +97,32 @@
  first_name:"Hello",
  last_name:"Bye"
 }
+  ```
+</li>
+
+<li>
+  Function:
+
+  ```ts
+  function add(x:number,y:number):number{
+    return (x+y);
+};
+
+const multiply=(x:number,y:number):number=>{
+    return (x+y);
+}
+
+
+let wallet={
+    first_name:"Hello",
+    balance:0,
+    addBalance(x:number):number{
+        return this.balance+=x;
+    }
+}
+
+const arr:number[]=[2,3,4,5,6]
+const new_arr:number[]=arr.map((el:number):number=>el*el)
   ```
 </li>
   
