@@ -482,7 +482,7 @@ Never,unknown and nullable type
 
 <li>
 
-Constraints In Tpescript: Enforce any rule.
+Constraints In Typescript: Enforce any rule.
 
 ```ts
 {
