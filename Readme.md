@@ -386,4 +386,118 @@ Never,unknown and nullable type
 ```  
 </li>
 
+<li>
+  Generics with interface:
+
+```ts
+{
+    interface Developer<T>{
+        designation:string,
+        laptop_conf:{
+            brand_name:string,
+            model_name:string,
+            release_year:string
+        },
+        work_location:T
+    }
+
+
+    const SDE1:Developer<{work_mode:string;location:string}>={
+        designation:"SDE1 Level 6",
+        laptop_conf:{
+            brand_name:"Apple",
+            model_name:"M3 Pro 16GB 512 GB",
+            release_year:'2023'
+        },
+        work_location:{
+            work_mode:'Hybrib 2 days in onsite, 3 days from home',
+            location:'San Francisco, California'
+        }
+    }
+    
+    const SDE2:Developer<{work_mode:string;location:string}>={
+        designation:"SDE2 Level 3",
+        laptop_conf:{
+            brand_name:"Apple",
+            model_name:"M3 Pro 16GB 512 GB",
+            release_year:'2023'
+        },
+        work_location:{
+            work_mode:'Fully Remote',
+            location:'Bengaluru, Karnatak, India'
+        }
+    }
+
+
+    const SDE3:Developer<{work_mode:string;location:string}>={
+        designation:"SDE3 Level 6",
+        laptop_conf:{
+            brand_name:"Apple",
+            model_name:"M3 Pro 16GB 512 GB",
+            release_year:'2023'
+        },
+        work_location:{
+            work_mode:'Hybrib (3 days in onsite, 2 days from home)',
+            location:'Charlotte, North Carolina'
+        }
+    }
+
+
+
+    console.log(SDE1,SDE2,SDE3);
+}
+```
+  
+</li>
+
+
+<li>
+  Function with generics
+
+```ts
+{
+  const create_array1=(param:string):string[]=>{
+    return [param];
+  }   
+
+  const create_array2=<T>(param:T):T[]=>{
+    return [param]
+  }
+
+
+  const Student=<T>(param:T)=>{
+    const course='Introduction To Typescript'
+    return {...param,course};
+  }
+
+  console.log(Student({name:"Hello",institution:"IIT Guwahati"}));
+
+  console.log(create_array1('Hello'));
+
+  console.log(create_array2(['Hello',true,'Hi']));
+}
+```
+  
+</li>
+
+<li>
+
+Constraints In Tpescript: Enforce any rule.
+
+```ts
+{
+    // must send extends data type in T
+    const Student=<T extends {name:string;institution:string;location:string}>  
+    (param:T)=>{
+        const course="Introduction To R"
+        return {...param,course};
+    }
+
+    const std1=Student({name:"Hello",institution:"IIT Guwahati",location:"SGP"});
+    const std2=Student({name:"Hi",institution:"AIT",location:"SGP"})
+    console.log(std1,std2);
+}
+```
+  
+</li>
 </ol>
