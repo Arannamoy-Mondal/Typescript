@@ -1,6 +1,6 @@
 <ol>
   <li>
-    <div id="check_node_v">
+  <div id="check_node_v">
 <a href="#topic">Topic</a>      
 <h1>Check node js:</h1>       
     
@@ -22,7 +22,8 @@
   </li>
   <li>
 <div id="check_ts_v">
-  Check typescript version:
+  <a href="#topic">Topic</a>   
+  <h1>Check typescript version:</h1>
 
 ```
     npm tsc -v
@@ -33,7 +34,8 @@
   <li>
 
 <div id="run_ts_file">
-Run typescript file:
+  <a href="#topic">Topic</a>   
+<h1>Run typescript file:</h1>
 
 ```
     node index.ts
