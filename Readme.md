@@ -604,7 +604,7 @@ Constraints In Typescript: Enforce any rule.
 }
 ``` 
 </li>
-
+<li>
 <div id="class_object">
         <a href="#topic">Topic</a>
         <h2>Class and Object</h2>
@@ -631,6 +631,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="inheritance">
         <a href="#topic">Topic</a>
         <h1>Inheritance</h1>
@@ -671,6 +673,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="type_guard_using_typeof_in">
         <a href="#topic">Topic</a>
         <h1>Type guard using typeof & in</h1>
@@ -726,6 +730,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="access_modifiers">
         <a href="#topic">Topic</a>
         <h1>Access Modifiers</h1>
@@ -764,6 +770,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="getter_setter_methods">
         <a href="#topic">Topic</a>
         <h1>Getter_Setter_Method</h1>
@@ -816,6 +824,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="static">
         <a href="#topic">Topic</a>
         <h1>Static keyword</h1>
@@ -836,6 +846,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
+<li>
 <div id="polymorphism">
         <a href="#topic">Topic</a>
         <h1>Polymorphism</h1>
@@ -891,7 +903,8 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
-
+</li>
+<li>
 <div id="abstraction_interface">
         <a href="#topic">Topic</a>
         <h1>Abstraction and Interface keyword</h1>
@@ -967,4 +980,5 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+</li>
 </ol>
