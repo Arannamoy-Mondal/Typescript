@@ -1,3 +1,35 @@
+<ol id="topic">
+        <li><a href="#check_node_v">Check Node Version</a></li>
+        <li><a href="#install_ts">Install Typescript</a></li>
+        <li><a href="#check_ts_v">Check Typescript Version</a></li>
+        <li><a href="#run_ts_file">Run Typescript File</a></li>
+        <li><a href="#create_ts_json_conf_file">Create Typescript JSON Config File</a></li>
+        <li><a href="#config_ts_file">Configure Typescript JSON File</a></li>
+        <li><a href="#run_directly">Run Typescript File Like Server</a></li>
+        <li><a href="#ts_data_type">Typescript Data Type</a></li>
+        <li><a href="#function">Function In Typescript</a></li>
+        <li><a href="#spread_and_rest_operator">Spread And Rest Operator</a></li>
+        <li><a href="#destructuring">Destructuring</a></li>
+        <li><a href="#type_alias">Type Alias</a></li>
+        <li><a href="#ternary_optional">Ternary, Optional Chaining, Nullish Operator</a></li>
+        <li><a href="#never_unknown">Never,unknown and nullable type</a></li>
+        <li><a href="#interface_1">Interface part-1</a></li>
+        <li><a href="#intro_generics">Introduction to generics</a></li>
+        <li><a href="#generics_with_interface">Generics With Interface</a></li>
+        <li><a href="#Function_with_generics">Function_with_generics</a></li>
+        <li><a href="#Constraints_In_Typescript">Constraints_In_Typescript</a></li>
+        <li><a href="#Utility">Utility_In_Typescript</a></li>
+        <li><a href="#class_object">Class and Object</a></li>
+        <li><a href="#inheritance">Inheritance</a></li>
+        <li><a href="#type_guard_using_typeof_in"> Type guard using typeof & in</a></li>
+        <li><a href="#access_modifiers">Access Modifiers</a></li>
+        <li><a href="#getter_setter_methods">Getter Setter Method</a></li>
+        <li><a href="#static">Static</a></li>
+        <li><a href="#polymorphism">Polymorphism</a></li>
+        <li><a href="#abstraction_interface">Abstraction and Interface keyword</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ol>
 <ol>
   <li>
   <div id="check_node_v">
@@ -18,7 +50,6 @@
     npm install typescript --save-dev
 ```
 </div>    
-    
   </li>
   <li>
 <div id="check_ts_v">
@@ -29,7 +60,6 @@
     npm tsc -v
 ```
 </div>    
-    
   </li>
   <li>
 
@@ -40,18 +70,24 @@
 ```
     node index.ts
 ```  
-</div>
+
     
+  </div>
   </li>
    <li>
+   <div id="create_ts_json_conf_file">
+   <a href="#topic">Topic</a>  
     Create typescript config json file:
 
   ```
     npx tsc index.ts
   ```
     
+  </div>
   </li>
   <li>
+  <div id="config_ts_file">
+  <a href="#topic">Topic</a>  
     Config typescript config json file:
 
   ```json
@@ -68,9 +104,12 @@
   >> npm দিয়ে আমরা প্যাকেজ ইনস্টল করি।
   > 
   >> npx দিয়ে আমরা প্যাকেজ রান করি, এমনকি ইনস্টল না করেও।  
+  </div>
   </li>
 
 <li>
+<div id="run_directly">
+<a href="#topic">Topic</a>  
   Run directly ts file
 
 `import ts-node-dev package`
@@ -82,9 +121,12 @@ npm i ts-node-dev --save-dev
 ```sql
 npx ts-node-dev --respawn --transpile-only file _name
 ```
+</div>
 </li>
   
 <li>
+<div id="ts_data_type">
+<a href="#topic">Topic</a>  
   Typescripty data tpyes:
 
   `implicit data type`
@@ -116,9 +158,12 @@ npx ts-node-dev --respawn --transpile-only file _name
  last_name:"Bye"
 }
   ```
+</div>
 </li>
 
 <li>
+<div id="function">
+<a href="#topic">Topic</a>  
   Function:
 
   ```ts
@@ -142,8 +187,11 @@ let wallet={
 const arr:number[]=[2,3,4,5,6]
 const new_arr:number[]=arr.map((el:number):number=>el*el)
   ```
+</div>
 </li>
 <li>
+<div id="spread_and_rest_operator">
+<a href="#topic">Topic</a>  
   Spread and Rest Operator: Typescript consider any variable as a global variable. 
 
 `Scope:`
@@ -182,9 +230,12 @@ const new_arr:number[]=arr.map((el:number):number=>el*el)
 }
 ```
 
+</div>
 </li>
 
 <li>
+<div id="destructuring">
+<a href="#topic">Topic</a>  
   Destructuring:
 
 `Destructuring:`
@@ -213,9 +264,12 @@ const new_arr:number[]=arr.map((el:number):number=>el*el)
     console.log(lm,rtx,sl,...other);
 }
 ```
+</div>
 </li>
 
 <li>
+<div id="type_alias">
+<a href="#topic">Topic</a>  
 Type Alias: Works like class.
 
 ```ts
@@ -238,9 +292,12 @@ Type Alias: Works like class.
     }
 }
 ``` 
+</div>
 </li>  
 
 <li>
+<div id="ternary_optional">
+<a href="#topic">Topic</a>  
 Ternary, optional chaining & nullish coalescing operator
 
 ```ts
@@ -268,8 +325,11 @@ Ternary, optional chaining & nullish coalescing operator
 }
 ```
   
+</div>
 </li>
 <li>
+<div id="never_unknown">
+<a href="#topic">Topic</a>  
 Never,unknown and nullable type
 
 ```ts
@@ -299,9 +359,12 @@ Never,unknown and nullable type
     error_func("It's a mistake.")
 }
 ```  
+</div>
 </li>
 
 <li>
+<div id="interface_1">
+<a href="#topic">Topic</a>  
   Interface is used for only non primitive data type.
 
 ```ts
@@ -352,9 +415,12 @@ Never,unknown and nullable type
 ```
 
   
+</div>
 </li>
 
 <li>
+<div id="intro_generics">
+<a href="#topic">Topic</a>  
   Introduction to generics:
 
 ```ts
@@ -396,9 +462,12 @@ Never,unknown and nullable type
 
 }
 ```  
+</div>
 </li>
 
 <li>
+<div id="generics_with_interface">
+<a href="#topic">Topic</a>  
   Generics with interface:
 
 ```ts
@@ -460,10 +529,13 @@ Never,unknown and nullable type
 }
 ```
   
+</div>
 </li>
 
 
 <li>
+<div id="Function_with_generics">
+<a href="#topic">Topic</a>  
   Function with generics
 
 ```ts
@@ -490,10 +562,12 @@ Never,unknown and nullable type
 }
 ```
   
+</div>
 </li>
 
 <li>
-
+<div id="Constraints_In_Typescript">
+<a href="#topic">Topic</a>  
 Constraints In Typescript: Enforce any rule.
 
 ```ts
@@ -511,9 +585,12 @@ Constraints In Typescript: Enforce any rule.
 }
 ```
   
+</div>
 </li>
 
 <li>
+<div id="Utility">
+<a href="#topic">Topic</a>  
   Utility:
 
 ```sql
@@ -615,6 +692,7 @@ Constraints In Typescript: Enforce any rule.
     // Record end
 }
 ``` 
+</div>
 </li>
 <li>
 <div id="class_object">
@@ -643,6 +721,7 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+
 </li>
 <li>
 <div id="inheritance">
@@ -782,6 +861,7 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+
 </li>
 <li>
 <div id="getter_setter_methods">
@@ -836,6 +916,7 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+
 </li>
 <li>
 <div id="static">
@@ -858,8 +939,10 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+
 </li>
 <li>
+
 <div id="polymorphism">
         <a href="#topic">Topic</a>
         <h1>Polymorphism</h1>
@@ -915,8 +998,10 @@ Constraints In Typescript: Enforce any rule.
         }
 ```
 </div>
+
 </li>
 <li>
+
 <div id="abstraction_interface">
         <a href="#topic">Topic</a>
         <h1>Abstraction and Interface keyword</h1>
