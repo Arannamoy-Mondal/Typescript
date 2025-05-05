@@ -604,4 +604,367 @@ Constraints In Typescript: Enforce any rule.
 }
 ``` 
 </li>
+
+<div id="class_object">
+        <a href="#topic">Topic</a>
+        <h2>Class and Object</h2>
+
+```ts
+        {
+        class Laptop{
+        public brand:string;
+        public cpu:string;
+        constructor(brand:string,cpu:string){
+        this.brand=brand;
+        this.cpu=cpu;
+        }
+
+        giveDetails(){ // can't use this keyword in arrow function that's why anonymous function
+        return ("Made In China.");
+        }
+        }
+
+        const mac1=new Laptop("Apple","M1");
+        const mac2=new Laptop("Apple","M1 Pro");
+        const mac3=new Laptop("Apple","M2");
+        console.log(mac1,mac2,mac3,mac1.giveDetails());
+        }
+```
+</div>
+<div id="inheritance">
+        <a href="#topic">Topic</a>
+        <h1>Inheritance</h1>
+
+```ts
+        {
+        class CPU{
+        constructor(public core:number,public thread:number,public tdp:number,public isGraphics:boolean){
+        }
+        }
+
+        class AMD extends CPU{
+        constructor(public core:number,public thread:number,public tdp:number,public isGraphics:boolean
+        ,public model_no:string,public graphics_name:string,
+        public mobo_chipset:string
+        ){
+        super(core,thread,tdp,isGraphics); // Only pass these params which are available in Parent class
+        this.model_no=model_no;
+        this.graphics_name=graphics_name;
+        this.mobo_chipset;
+        }
+        }
+
+        class Intel extends CPU{
+        constructor(public core:number,public thread:number,public tdp:number,public isGraphics:boolean
+        ,public model_no:string,public graphics_name:string,
+        public mobo_chipset:string
+        ){
+        super(core,thread,tdp,isGraphics);
+        this.model_no=model_no;
+        this.graphics_name=graphics_name;
+        this.mobo_chipset;
+        }
+        }
+
+        const i9=new Intel(24,32,125,true,"I9 14900K","UHD 770","B860");
+        console.log(i9);
+        }
+```
+</div>
+<div id="type_guard_using_typeof_in">
+        <a href="#topic">Topic</a>
+        <h1>Type guard using typeof & in</h1>
+
+```ts
+        {
+        // type guards
+
+        // typeof --> type guard
+
+        type Alphaneumeric = string | number;
+
+        const add = (param1: Alphaneumeric, param2: Alphaneumeric): Alphaneumeric => {
+        if (typeof param1 === "number" && typeof param2 === "number") {
+        return param1 + param2;
+        } else {
+        return param1.toString() + param2.toString();
+        }
+        };
+
+        const result1 = add("2", "3");
+        console.log(result1);
+
+        // in guard
+        type NormalUser = {
+        name: string;
+        };
+
+        type AdminUser = {
+        name: string;
+        role: "admin";
+        };
+
+        const getUser = (user: NormalUser | AdminUser) => {
+        if ("role" in user) {
+        console.log(`My name is ${user.name} and my role is ${user.role}`);
+        } else {
+        console.log(`My name is ${user.name}`);
+        }
+        };
+
+        const normalUser: NormalUser = {
+        name: "Mr. Normal Bhai",
+        };
+        const adminUser: AdminUser = {
+        name: "Mr. Admin Bhai",
+        role: "admin",
+        };
+
+        getUser(adminUser);
+
+        //
+        }
+```
+</div>
+<div id="access_modifiers">
+        <a href="#topic">Topic</a>
+        <h1>Access Modifiers</h1>
+
+```ts
+        {
+
+        // private modifiers can not access in child class
+        // protected modifiers can be access in child class
+
+        class BankAccount{
+        protected total_balance:number;
+        constructor(public readonly ac_no:string,private customer_name:string,private bank_balance:number){
+        this.ac_no=ac_no;
+        this.customer_name=customer_name;
+        this.bank_balance=bank_balance;
+        this.total_balance=bank_balance;
+        }
+
+        addDeposit(balance:number){
+        this.bank_balance+=balance;
+        this.total_balance=this.bank_balance;
+        }
+        }
+
+
+        class BankAccount1 extends BankAccount{
+        test(){
+        this.total_balance;
+        }
+        }
+        const ac1=new BankAccount("01","Hello",0);
+        ac1.addDeposit(500)
+        ac1.addDeposit(600)
+        console.log(ac1,ac1.ac_no);
+        }
+```
+</div>
+<div id="getter_setter_methods">
+        <a href="#topic">Topic</a>
+        <h1>Getter_Setter_Method</h1>
+
+```ts
+        {
+        class Person{
+        constructor(protected _name:string,protected _age:number){}
+
+        get name(){
+        return this._name;
+        }
+
+        get age(){
+        return this._age;
+        }
+
+        set name(val:string){
+        this._name=val;
+        }
+
+        set age(val:number){
+        this._age=val;
+        }
+        }
+
+
+        class Teacher extends Person{
+        constructor(protected _name:string,protected _age:number,protected _institute:string,
+        protected _bank_ac:string
+        ){
+        super(_name,_age);
+        this._bank_ac=_bank_ac;
+        this._institute=_institute;
+        }
+
+        get bank_ac(){
+        return this._bank_ac;
+        }
+
+        get institute(){
+        return this._institute;
+        }
+        }
+
+
+        const p1=new Person("Hello",26);
+        p1.age=26;
+        console.log(p1.name,p1.age);
+        }
+```
+</div>
+<div id="static">
+        <a href="#topic">Topic</a>
+        <h1>Static keyword</h1>
+
+```ts
+        {
+        class Person{ // static works like global memory. it not depends on instance, it depends on class
+        static count=0;
+        constructor(protected _name:string){
+        this._name=_name;
+        Person.count++;
+        }
+        }
+
+        const p1=new Person("hello");
+        const p2=new Person("Hi");
+        console.log(Person.count);
+        }
+```
+</div>
+<div id="polymorphism">
+        <a href="#topic">Topic</a>
+        <h1>Polymorphism</h1>
+
+```ts
+        {
+        // Polymorphism মানে – এক নাম, অনেক রূপ।
+        // Polymorphism = One name, many behaviors.
+        abstract class Person{
+        constructor(protected name:string,protected age:number){}
+        working_hour(){
+
+        }
+        }
+
+
+        class SDEI extends Person{
+        constructor(protected _name:string,protected _age:number,protected _location:string,protected _work_mode:string,
+        protected _mentor:string
+        ){
+        super(_name,_age);
+        this._location=_location;
+        this._work_mode=_work_mode;
+        this._mentor=_mentor;
+        }
+
+        working_hour(): string {
+        return `${this._name} is software developement engineer intern. `
+        }
+        }
+
+        class SDE extends Person{
+        constructor(protected _name:string,protected _age:number,protected _location:string,protected _work_mode:string,
+        protected _manager:string
+        ){
+        super(_name,_age);
+        this._location=_location;
+        this._work_mode=_work_mode;
+        this._manager=_manager;
+        }
+
+        working_hour(): string {
+        return `${this._name} is software developement engineer. `
+        }
+        }
+
+
+
+        const sde1=new SDE("Hello",26,"Bengaluru","On-site","Self");
+        const sdei1=new SDEI("Hi",22,"Bengaluru","Remote","Hello");
+
+        console.log(sde1.working_hour(),"\n",sdei1.working_hour());
+        }
+```
+</div>
+
+<div id="abstraction_interface">
+        <a href="#topic">Topic</a>
+        <h1>Abstraction and Interface keyword</h1>
+
+```ts
+        {
+
+            // Abstraction can implements via interface keyword and also abstract keyword.
+            
+            abstract class Person{
+                constructor(protected name:string,protected age:number){}
+                abstract working_hour():void; // using abstract keyword class must be impement in child class
+        
+        
+            }
+            
+        
+        
+            class SDEI extends Person{
+                constructor(protected _name:string,protected _age:number,protected _location:string,protected _work_mode:string,
+                    protected _mentor:string
+                ){
+                    super(_name,_age);
+                    this._location=_location;
+                    this._work_mode=_work_mode;
+                    this._mentor=_mentor;
+                }
+        
+                working_hour(): string {
+                    return `${this._name} is software developement engineer intern. `
+                }
+            }
+        
+            class SDE extends Person{
+                constructor(protected _name:string,protected _age:number,protected _location:string,protected _work_mode:string,
+                    protected _manager:string
+                ){
+                    super(_name,_age);
+                    this._location=_location;
+                    this._work_mode=_work_mode;
+                    this._manager=_manager;
+                }
+        
+                working_hour(): string {
+                    return `${this._name} is software developement engineer. `
+                }
+            }
+        
+        
+        
+            const sde1=new SDE("Hello",26,"Bengaluru","On-site","Self");
+            const sdei1=new SDEI("Hi",22,"Bengaluru","Remote","Hello");
+        
+            console.log(sde1.working_hour(),"\n",sdei1.working_hour());
+        
+        
+        
+            interface Vehicle{
+                name():void
+                model_no():void
+            }
+        
+            class Toyota implements Vehicle{
+                name():string{
+                    return "Hello, This is Toyota"
+                }
+                model_no(): string {
+                    return "Hello, This is V8."
+                }
+            }
+            const t1=new Toyota()
+            console.log(t1.name(),t1.model_no());
+        }
+```
+</div>
 </ol>
