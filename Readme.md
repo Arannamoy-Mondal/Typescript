@@ -11,7 +11,7 @@
 </li>
 <li>
 <div id="install_ts">
-  
+  <a href="#topic">Topic</a> 
 <h1>Install typescript ( Ubuntu ) :</h1>
 
 ```
