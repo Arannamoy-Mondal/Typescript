@@ -1,34 +1,44 @@
 <ol>
   <li>
-    Check node js: 
+    <div id="check_node_v">
+<a href="#topic">Topic</a>      
+<h1>Check node js:</h1>       
     
 ```
     node -v
 ```
-    
-  </li>
-  <li>
-    Install typescript ( Ubuntu ) :
-    
-  ```
+</div>
+</li>
+<li>
+<div id="install_ts">
+  
+<h1>Install typescript ( Ubuntu ) :</h1>
+
+```
     npm install typescript --save-dev
-  ```
+```
+</div>    
     
   </li>
   <li>
-    Check typescript version:
+<div id="check_ts_v">
+  Check typescript version:
 
-  ```
+```
     npm tsc -v
-  ```
+```
+</div>    
     
   </li>
   <li>
-    Run typescript file:
 
-  ```
+<div id="run_ts_file">
+Run typescript file:
+
+```
     node index.ts
-  ```
+```  
+</div>
     
   </li>
    <li>
