@@ -86,7 +86,7 @@
 </h1>
 
   ```
-    npx tsc index.ts
+    npx tsc --init
   ```
     
   </div>
